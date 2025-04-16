@@ -4,7 +4,7 @@ import config from "../config";
 import FadeInSection from "../components/FadeInSection";
 
 const HeroSection = () => {
-  const imageSrc = "/assets/profile_1.png";
+  const imageSrc = "./assets/profile_1.png";
   const hasImage = imageSrc !== "" && imageSrc !== null;
 
   return (

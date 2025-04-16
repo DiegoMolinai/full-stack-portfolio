@@ -12,7 +12,7 @@ import config from "../config";
 import FadeInSection from "../components/FadeInSection";
 
 const AboutSection = () => {
-  const imageSrc = "/assets/about-image.png";
+  const imageSrc = "./assets/about-image.png";
   const hasImage = imageSrc !== "" && imageSrc !== null;
 
   return (
