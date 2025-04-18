@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter basename="/mi-portafolio">
+      <BrowserRouter basename="/full-stack-portfolio">
         <AppRoutes />
       </BrowserRouter>
     </ThemeProvider>

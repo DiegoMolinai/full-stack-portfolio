@@ -88,7 +88,7 @@ const SkillsSection = () => {
                       p: 3,
                       minHeight: "150px",
                       borderRadius: 3,
-                      border:"2px solid var(--color-accent)",
+                      border: "2px solid var(--color-accent)",
                       backgroundColor: "#1e1e1e",
                       alignContent: "center",
                       color: skill.color,
@@ -132,18 +132,22 @@ const SkillsSection = () => {
       <Dialog
         open={dialogOpen}
         onClose={handleCloseDialog}
-        onExited={handleExited}
-        slots={{ transition: Transition }}
         keepMounted
         fullWidth
         maxWidth="sm"
+        slots={{ transition: Transition }}
         slotProps={{
-          sx: {
-            backgroundColor: "#1e1e1e",
-            color: "var(--color-text)",
-            borderRadius: 3,
-            px: { xs: 2, sm: 3 },
-            py: 2,
+          transition: {
+            onExited: handleExited,
+          },
+          paper: {
+            sx: {
+              backgroundColor: "#1e1e1e",
+              color: "var(--color-text)",
+              borderRadius: 3,
+              px: { xs: 2, sm: 3 },
+              py: 2,
+            },
           },
         }}
       >

@@ -91,7 +91,7 @@ const ProjectsSection = () => {
                       flexDirection: "column",
                       borderRadius: 3,
                       overflow: "hidden",
-                      border:"2px solid var(--color-accent)",
+                      border: "2px solid var(--color-accent)",
                       transition: "all 0.3s",
                       "&:hover": {
                         transform: "scale(1.05)",
@@ -108,7 +108,7 @@ const ProjectsSection = () => {
                           height="180"
                           image={project.image}
                           alt={project.title}
-                          sx={{borderBottom:"2px solid var(--color-accent)"}}
+                          sx={{ borderBottom: "2px solid var(--color-accent)" }}
                         />
                       ) : (
                         <Box
@@ -118,7 +118,7 @@ const ProjectsSection = () => {
                             alignItems: "center",
                             justifyContent: "center",
                             backgroundColor: "#2b2b2b",
-                            borderBottom:"2px solid var(--color-accent)"
+                            borderBottom: "2px solid var(--color-accent)",
                           }}
                         >
                           <WorkOutlineIcon
@@ -178,7 +178,14 @@ const ProjectsSection = () => {
                       )}
                     </CardContent>
 
-                    <CardActions sx={{ mt: "auto", px: 2, pb: 2, borderTop:"2px solid var(--color-accent)"}}>
+                    <CardActions
+                      sx={{
+                        mt: "auto",
+                        px: 2,
+                        pb: 2,
+                        borderTop: "2px solid var(--color-accent)",
+                      }}
+                    >
                       {project.link && (
                         <Button
                           size="small"
@@ -214,17 +221,21 @@ const ProjectsSection = () => {
       <Dialog
         open={dialogOpen}
         onClose={handleCloseDialog}
-        onExited={handleExited}
         keepMounted
         fullWidth
         maxWidth="sm"
         slots={{ transition: Transition }}
         slotProps={{
+          transition: {
+            onExited: handleExited,
+          },
           paper: {
-            backgroundColor: "#1e1e1e",
-            color: "var(--color-text)",
-            borderRadius: 3,
-            p: 1,
+            sx: {
+              backgroundColor: "#1e1e1e",
+              color: "var(--color-text)",
+              borderRadius: 3,
+              p: 1,
+            },
           },
         }}
       >
