@@ -1,18 +1,21 @@
-import HeroSection from '../../sections/HeroSection';
-import AboutSection from '../../sections/AboutSection';
-import ProjectsSection from '../../sections/ProjectsSection';
-import ContactSection from '../../sections/ContactSection';
-import SkillsSection from '../../sections/SkillsSection';
+import { lazy, Suspense } from 'react';
+import LoadingFallback from '../../components/LoadingFallBack';
+
+const HeroSection = lazy(() => import('../../sections/HeroSection'));
+const AboutSection = lazy(() => import('../../sections/AboutSection'));
+const SkillsSection = lazy(() => import('../../sections/SkillsSection'));
+const ProjectsSection = lazy(() => import('../../sections/ProjectsSection'));
+const ContactSection = lazy(() => import('../../sections/ContactSection'));
 
 const HomePage = () => {
   return (
-    <>
+    <Suspense fallback={<LoadingFallback />}>
       <HeroSection />
       <AboutSection />
-      <SkillsSection /> 
+      <SkillsSection />
       <ProjectsSection />
       <ContactSection />
-    </>
+    </Suspense>
   );
 };
 

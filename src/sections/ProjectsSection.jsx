@@ -143,11 +143,12 @@ const ProjectsSection = () => {
                         color="text.secondary"
                         sx={{
                           display: "-webkit-box",
-                          WebkitLineClamp: 3,
                           WebkitBoxOrient: "vertical",
+                          WebkitLineClamp: 3,
                           overflow: "hidden",
                           textOverflow: "ellipsis",
-                          minHeight: 70,
+                          minHeight: "4.5em", // Aproximadamente 3 líneas de texto
+                          lineHeight: "1.5em",
                         }}
                       >
                         {project.description}
