@@ -14,6 +14,6 @@ export default defineConfig({
       },
     },
   },
-  base: '/full-stack-portfolio/',
+  base: '/',
   plugins: [react()],
 })
